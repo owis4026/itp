@@ -3,19 +3,19 @@
 
 
 body {
-   background: rgb(238, 105, 90); repeat top left / 450px 450px;
+   background: rgb(238, 105, 90); 
    font-family: Verdana, Geneva, sans-serif;
 }
 
 
 
 section#main {
-   background: rgb(121, 39, 32);
+   background: rgb(238, 105, 90); 
    box-shadow: rgb(121, 39, 32) 0px 0px 50px; 
 }
 
 div#box {
-   background: rgb(238, 105, 90);) no-repeat;
+   background: rgb(238, 105, 90);)
    background-size: cover;
 }
 
