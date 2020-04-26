@@ -9,7 +9,6 @@ body {
 
 
 
-/* Main Section Styles */
 section#main {
    background: rgb(59, 136, 197);
    box-shadow: rgb(43, 87, 129) 0px 0px 50px; 
@@ -19,7 +18,7 @@ div#box {
    background: url(shirt2.jpeg) no-repeat;
    background-size: cover;
 }
-/* Article Styles */
+
 
 article {
    position: absolute;
@@ -42,7 +41,7 @@ address {
 }
 
 
-/* Page footer styles */
+
 
 
 footer span a:hover {
