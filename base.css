@@ -1,7 +1,9 @@
 @charset "utf-8";
-article, aside, figcaption, figure,
-footer, header, main, nav, section { 
+article, aside, figcaption, figure, main, nav, section { 
    display: block;
+}
+header, footer {
+   color: black
 }
 
 address, article, aside, blockquote, body, cite, 
