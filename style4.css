@@ -1,1 +1,27 @@
+@charset "utf-8";
 
+
+
+body {
+   background: url(na_back_4.png) repeat top left/ 450px 450px;
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+section#main {
+   background: rgb(211, 109, 0);
+   box-shadow: rgb(211, 109, 0) 0px 0px 50px; 
+}
+
+div#box {
+   background: url(na_wall_4.png) no-repeat;
+   background-size: cover;
+}
+
+
+article {
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   width: 230px;
+   font-size: 0.9em;
+}
