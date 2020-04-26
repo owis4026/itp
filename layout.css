@@ -30,7 +30,7 @@ section#main {
 
    
 #main > div#header {
-   background: url(logo1.jpeg) no-repeat left top;
+   background: rgb(47,79,79);
 }
 
 #main > div#header > a {
