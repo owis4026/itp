@@ -12,7 +12,7 @@ function setStyles() {
    var newStyle = document.createElement("link");
    newStyle.setAttribute("rel", "stylesheet");   
    newStyle.setAttribute("id", "fancySheet");   
-   newStyle.setAttribute("href",  "na_style_" + styleNum + ".css");
+   newStyle.setAttribute("href",  "style" + styleNum + ".css");
    document.head.appendChild(newStyle);
    
    
@@ -25,7 +25,7 @@ function setStyles() {
    for (var i = 0; i < 5; i++) {
       var sheetImg = document.createElement("img");
       sheetImg.setAttribute("src", "na_small_" + i + ".png");
-      sheetImg.setAttribute("alt", "na_style_" + i + ".css");
+      sheetImg.setAttribute("alt", "style" + i + ".css");
       sheetImg.onclick = function(e) {
          document.getElementById("fancySheet").href = e.target.alt;
       };
