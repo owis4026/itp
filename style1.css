@@ -16,7 +16,7 @@ section#main {
 }
 
 div#box {
-   background: color:rgb(139,0,139); 
+   background: url(shirt1.jpeg) no-repeat; 
    background-size: cover;
 }
 
