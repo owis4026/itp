@@ -24,9 +24,7 @@ function setStyles() {
     
    for (var i = 0; i < 4; i++) {
       var sheetImg = document.createElement("img");
-      sheetImg.setAttribute("src", "shirt" + i + ".jpeg");
-      img.height = 50px
-      img.width = 50px
+      sheetImg.setAttribute("src", "small" + i + ".jpg");
       sheetImg.setAttribute("alt", "style" + i + ".css");
       sheetImg.onclick = function(e) {
          document.getElementById("fancySheet").href = e.target.alt;
