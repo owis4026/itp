@@ -3,24 +3,23 @@
 
 
 body {
-   background: url(shirt3.jpeg) repeat top left / 448px 336px;
+   background: color:rgb(139,0,139); 
    font-family: Verdana, Geneva, sans-serif;
 }
 
 
 
-/* Main Section Styles */
+
 section#main {
    background: rgb(101, 101, 101);
    box-shadow: rgb(0,0,0) 0px 0px 50px; 
 }
 
 div#box {
-   background: url(shirt3.jpeg) no-repeat;
+   background: color:rgb(139,0,139); 
    background-size: cover;
 }
 
-/* Article Styles */
 
 article {
    position: absolute;
@@ -43,7 +42,7 @@ address {
 
 
 
-/* Page footer styles */
+
 
 
 footer span a:hover {
