@@ -1,25 +1,70 @@
-use strict;
 
-function show(shown, hidden) {
-	document.getElementById(shown).style.display='block';
-	document.getElementById(hidden).style.display='none';
-	return false;
-	}
+function SaveItem() {
+			
+	var name = document.forms.ShoppingList.name.value;
+	var data = document.forms.ShoppingList.data.value;
+	localStorage.setItem(name, data);
+	doShowAll();
 	
-function AddtoCart() {
-	console.log( 'hi');
-	var x=document.getElementById('Items');
-	var new_row = x.rows[1].cloneNode(true);
-	var len = x.rows.length;
-    new_row.cells[0].innerHTML = len;
-    
-	var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
-	inp1.id += len;
-	inp1.value = '';
-	var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
-	inp2.id += len;
-	inp2.value = '';
-	x.appendChild( new_row );
 }
 
-  
+function ModifyItem() {
+	var name1 = document.forms.ShoppingList.name.value;
+	var data1 = document.forms.ShoppingList.data.value;
+	
+	
+
+			if (localStorage.getItem(name1) !=null)
+			{
+			  
+			  localStorage.setItem(name1,data1);
+			  document.forms.ShoppingList.data.value = localStorage.getItem(name1);
+			}
+		
+	
+	doShowAll();
+}
+
+function RemoveItem() {
+	var name = document.forms.ShoppingList.name.value;
+	document.forms.ShoppingList.data.value = localStorage.removeItem(name);
+	doShowAll();
+}
+
+function ClearAll() {
+	localStorage.clear();
+	doShowAll();
+}
+
+function doShowAll() {
+	if (CheckBrowser()) {
+		var key = "";
+		var list = "<tr><th>Item</th><th>Value</th></tr>\n";
+		var i = 0;
+		
+		for (i = 0; i <= localStorage.length-1; i++) {
+			key = localStorage.key(i);
+			list += "<tr><td>" + key + "</td>\n<td>"
+					+ localStorage.getItem(key) + "</td></tr>\n";
+		}
+		
+		if (list == "<tr><th>Item</th><th>Value</th></tr>\n") {
+			list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+		}
+		
+		document.getElementById('list').innerHTML = list;
+	} else {
+		alert('Cannot save shopping list as your browser does not support HTML 5');
+	}
+}
+
+
+function CheckBrowser() {
+	if ('localStorage' in window && window['localStorage'] !== null) {
+		
+		return true;
+	} else {
+			return false;
+	}
+}
+
