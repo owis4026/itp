@@ -22,7 +22,7 @@ function setStyles() {
    
    // Create thumbnails for each style sheet
     
-   for (var i = 0; i < 4; i++) {
+   for (var i = 0; i < 5; i++) {
       var sheetImg = document.createElement("img");
       sheetImg.setAttribute("src", "small" + i + ".jpg");
       sheetImg.setAttribute("alt", "style" + i + ".css");
