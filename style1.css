@@ -3,7 +3,7 @@
 
 
 body {
-   background: url(shirt1.jpeg) repeat top left / 530px 300px;
+   background: color:rgb(139,0,139); 
    font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -16,10 +16,10 @@ section#main {
 }
 
 div#box {
-   background: url(shirt1.jpeg) no-repeat;
+   background: color:rgb(139,0,139); 
    background-size: cover;
 }
-/* Article Styles */
+
 
 article {
    position: absolute;
