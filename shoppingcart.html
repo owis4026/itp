@@ -1,36 +1,53 @@
-<!DOCTYPE html>
-<html>
-
-<div id="outside">
-<form id="checkout" action="/my-handling-form-page" method="post">
-  <h1 id="title">Check Out</h1>
-  
-
-  <fieldset>
- 
-    <legend>Shipping&Billing Details</legend>
- 
-    <div>
-      <label id="name-label" for="name">Name:</label>
-      <input type="text" required id="name" name="user_name" placeholder="Enter name here">   </div>
-    <div>
-      <label for="address-label">Address:</label>
-      <input type="Address" id="address" name="Address" placeholder="Enter address here">   </div>
-    <div>
-      <label id="email-label" for="Email">Email:</label>
-      <input type="email" required id="email" name="user_email" placeholder="Enter email here">   </div>
-    <div>
-      <label id="number-label" for="phone">Phone Number:</label>
-      <input type="number" id="number" name="user_name" placeholder="Enter 10 digit number" min="1" max="9">  </div>
-    <div>
-      <label id="Payment" for="Payment">IQ:</label>
-      <input type="number" id="Payment" name="iq" placeholder="Enter Payment info here">   </div>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<title>shopping cart</title>
+<META charset="UTF-8">
+<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<META NAME='rating' CONTENT='General' />
+<META NAME='expires' CONTENT='never' />
+<META NAME='language' CONTENT='English, EN' />
+<META name="description" content="shopping cart project with HTML5 and JavaScript">
+<META name="keywords" content="HTML5,CSS,JavaScript, html5 session storage, html5 local storage">
+<META name="author" content="dcwebmakers.com">
+<script src="Storage.js"></script>
+<link rel="stylesheet" href="StorageStyle.css">
+</head>
 
 
+<body onload="doShowAll()">
+	<h2>Shopping Cart with HTML5 Storage Project</h2>
+	<p>Insert items and quantity for your shopping cart. </p>
+	<form name=ShoppingList>
 
-  <div id="submitbutton">
-    <button type="submit" id="submit">Submit Order</button>   </div>
+		<div id="main">
+			<table>
+				<tr>
 
-</form>
-  </div>
+					<td><b>Item:</b><input type=text name=name></td>
+					<td><b>Quantity:</b><input type=text name=data></td>
+
+				</tr>
+
+				<tr>
+					<td>
+					    <input type=button value="Save"   onclick="SaveItem()"> 
+					    <input type=button value="Update" onclick="ModifyItem()"> 
+					    <input type=button value="Delete" onclick="RemoveItem()">
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="items_table">
+			<h3>Shopping List</h3>
+			<table id=list></table>
+			<p>
+				<label><input type=button value="Clear" onclick="ClearAll()">
+					<i>* Delete all items</i></label>
+			</p>
+		</div>
+	</form>
+
+</body>
 </html>
